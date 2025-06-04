@@ -65,7 +65,7 @@ public class ItemUtil {
         joinKitMeta.setCustomModelData(3);
         joinKitMeta.setLore(List.of(
                 ""
-                , ChatColor.WHITE + "입주를 환영합니다!"
+                , ChatColor.WHITE + "서버에 오신 것을 환영합니다!"
                 , ChatColor.WHITE + "생존에 필요한 기본 아이템을 받아보세요."
         ));
         item.setItemMeta(joinKitMeta);
