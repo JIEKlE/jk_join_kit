@@ -1,0 +1,7 @@
+jiekie\joinkit\util\SoundUtil.class
+jiekie\joinkit\event\PlayerEvent.class
+jiekie\joinkit\util\ItemUtil.class
+jiekie\joinkit\util\ChatUtil.class
+jiekie\joinkit\util\ParticleUtil.class
+jiekie\joinkit\command\JoinKitCommand.class
+jiekie\joinkit\JoinKitPlugin.class

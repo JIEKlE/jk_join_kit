@@ -1,0 +1,12 @@
+name: jk_join_kit
+version: '1.0-SNAPSHOT'
+main: jiekie.joinkit.JoinKitPlugin
+api-version: '1.20'
+authors: [JieKie]
+description: 스타터팩 지급 플러그인
+commands:
+  스타터팩:
+    description: 스타터팩 명령어
+    usage: /스타터팩
+    permission: jk.joinkit.command
+    permission-message: ''
