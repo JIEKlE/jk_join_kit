@@ -8,5 +8,6 @@ commands:
   스타터팩:
     description: 스타터팩 명령어
     usage: /스타터팩
+    tab-completer: jiekie.joinkit.completer.JoinKitCompleter
     permission: jk.joinkit.command
     permission-message: ''

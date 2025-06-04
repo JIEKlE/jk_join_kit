@@ -1,6 +1,7 @@
 package jiekie.joinkit;
 
 import jiekie.joinkit.command.JoinKitCommand;
+import jiekie.joinkit.completer.JoinKitTabCompleter;
 import jiekie.joinkit.event.PlayerEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -17,6 +18,9 @@ public final class JoinKitPlugin extends JavaPlugin {
 
         // command
         getCommand("스타터팩").setExecutor(new JoinKitCommand());
+
+        // tab completer
+        getCommand("스타터팩").setTabCompleter(new JoinKitTabCompleter());
 
         getLogger().info("스타터팩 지급 플러그인 by Jiekie");
         getLogger().info("Copyright © 2025 Jiekie. All rights reserved.");

@@ -23,10 +23,37 @@ public class JoinKitCommand implements CommandExecutor {
             return true;
         }
 
+        if(args == null || args.length == 0) {
+            ChatUtil.commandHelper(player);
+            return true;
+        }
+
+        switch(args[0]) {
+            case "받기":
+                getJoinKit(player);
+                break;
+
+            case "나침반":
+                getCompass(player);
+                break;
+
+            case "도움말":
+                ChatUtil.commandList(player);
+                break;
+
+            default:
+                ChatUtil.commandHelper(player);
+                break;
+        }
+
+        return true;
+    }
+
+    private void getJoinKit(Player player) {
         PlayerInventory inventory = player.getInventory();
         if(inventory.firstEmpty() == -1) {
             ChatUtil.showMessage(player, ChatUtil.INVENTORY_FULL);
-            return true;
+            return;
         }
 
         ItemStack joinKit = ItemUtil.getJoinKit();
@@ -34,7 +61,19 @@ public class JoinKitCommand implements CommandExecutor {
 
         ChatUtil.showMessage(player, ChatUtil.GET_JOIN_KIT);
         SoundUtil.playNoteBlockBell(player);
+    }
 
-        return true;
+    private void getCompass(Player player) {
+        PlayerInventory inventory = player.getInventory();
+        if(inventory.firstEmpty() == -1) {
+            ChatUtil.showMessage(player, ChatUtil.INVENTORY_FULL);
+            return;
+        }
+
+        ItemStack compass = ItemUtil.getCompass();
+        player.getInventory().addItem(compass);
+
+        ChatUtil.showMessage(player, ChatUtil.GET_COMPASS);
+        SoundUtil.playNoteBlockBell(player);
     }
 }

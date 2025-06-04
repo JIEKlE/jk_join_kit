@@ -1,4 +1,5 @@
 jiekie\joinkit\util\SoundUtil.class
+jiekie\joinkit\completer\JoinKitTabCompleter.class
 jiekie\joinkit\event\PlayerEvent.class
 jiekie\joinkit\util\ItemUtil.class
 jiekie\joinkit\util\ChatUtil.class
